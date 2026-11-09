@@ -1,23 +1,17 @@
-# Screen Recorder
+# Super-Local-Screen-Recorder
 
-Single-file, browser-only screen recorder. Screen plus a draggable webcam bubble and microphone, in-browser trimming, MP4 download. Nothing is uploaded anywhere.
+A screen recorder that runs entirely in the browser. Nothing gets uploaded.
 
-Everything lives in `index.html`: markup, styles and script. No build step, no dependencies. The only external request is the Nunito font from Google Fonts, and the page falls back to the system font when offline.
+- **Status:** Live
+- **Live at:** https://super-local-screen-recorder-app.kohjakob.com
+- **Repo:** [kohjakob/super-local-screen-recorder-app](https://github.com/kohjakob/super-local-screen-recorder-app) (public), inside `Web-App/`
 
-## Hosting
+## Folders
 
-Upload `index.html` to any static host (GitHub Pages, Netlify, Cloudflare Pages, an S3 bucket, a plain web server). It must be served over HTTPS, since browsers only allow screen and camera capture on secure origins. `localhost` also counts as secure for local testing:
+| Folder | What it is |
+|---|---|
+| `Web-App/` | The whole app, in one HTML file |
 
-```sh
-python3 -m http.server 8000
-```
+## Getting started
 
-## Local use
-
-The "Save recorder.html for later" button downloads the page itself as `recorder.html`. Double-clicking that file opens it from disk and it works the same way, offline.
-
-## Browser support
-
-Chrome, Edge and Safari record MP4 and get the trim editor. Firefox records WebM and downloads directly, because MediaRecorder WebM files carry no duration metadata and cannot be scrubbed.
-
-Desktop only. Screen recording relies on the [Screen Capture API](https://developer.mozilla.org/docs/Web/API/Screen_Capture_API), which no mobile browser implements. Phones and tablets get a message pointing to a desktop browser instead.
+Open [Web-App/README.md](Web-App/README.md).

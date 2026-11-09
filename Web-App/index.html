@@ -44,8 +44,7 @@ body {
     width: 100%;
     max-width: 1040px;
     margin: 0 auto;
-    /* Bottom padding clears the fixed portfolio bar so it never covers content */
-    padding: 24px 20px 8rem;
+    padding: 24px 20px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -290,20 +289,8 @@ body {
     border: 1px solid var(--border);
 }
 
-/* Portfolio bar, styled after kohjakob.com's footer */
-.portfolio-bar { --kj-link: #2c5aa0; --kj-link-hover: #c0392b; --kj-gray: #999999; --kj-gray-light: #cfcfcf; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: #ffffff; box-shadow: 0 -1px 2px rgba(20, 20, 30, 0.04), 0 -8px 24px rgba(20, 20, 30, 0.06); font-family: 'Murecho', 'Libre Baskerville', serif; font-weight: 400; font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: auto; color: var(--kj-gray); }
-.portfolio-bar-inner { max-width: 864px; margin: 0 auto; padding: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
-.portfolio-bar a { color: var(--kj-link); text-decoration: none; }
-.portfolio-bar .portfolio-explore { display: inline-flex; align-items: center; gap: 0.75rem; }
-.portfolio-bar .portfolio-avatar { width: 32px; height: 32px; /* Negative margin keeps the row exactly one 1.6em text line tall, matching kohjakob.com */ margin: calc((1.6em - 32px) / 2) 0; border-radius: 50%; object-fit: cover; flex: none; }
-.portfolio-bar .portfolio-imprint { color: var(--kj-gray-light); font-variant-emoji: text; white-space: nowrap; }
-.portfolio-bar a:hover { color: var(--kj-link-hover); text-decoration: underline; }
-@media (max-width: 600px) {
-  .portfolio-bar-inner { padding: 1.25rem 1rem; justify-content: center; text-align: center; }
-  .portfolio-bar .portfolio-explore { display: block; text-align: center; }
-  .portfolio-bar .portfolio-explore > span { display: inline; }
-  .portfolio-bar .portfolio-avatar { display: inline-block; vertical-align: middle; margin: -4px 0.5rem 0 0; }
-}
+.site-footer { padding: 1.5rem 1rem; text-align: center; font-size: 0.875rem; }
+.site-footer a { color: #6b7280; }
 
 /* Modals */
 .modal {
@@ -628,14 +615,8 @@ body {
     </div>
 </div>
 
-<footer class="portfolio-bar">
-    <div class="portfolio-bar-inner">
-        <span class="portfolio-explore">
-            <img class="portfolio-avatar" src="data:image/webp;base64,UklGRiQEAABXRUJQVlA4IBgEAABwEwCdASpAAEAAPmEojkUkIqEYCwZ8QAYEoAuzPCzfF3DbQX7etbl+bv4xJRuG+uSLzltuWaZKal5f/kIpjwuaRTOvMK66rgT0ja8Nn5GGqvLtCZYx6ovk8xXurYFQH732TNf0M3e83/z7s/BXN1GZV61MZu6qwM1w7DZ5O53OY63qrBCFc2fVgZpwrzLXa4YzQwXW7JzYOAyZGY6JuCL/ZqdgAAD+/pOuqPckdsQ4mBw3taQYgw+tP6m7PbcUAKbvIDeBiS0LWossxqghfwLfY1zHHTNbokvRNOL+gWf+SMKnn84sK/WerA1S7Fy1sm6yZlMeokgpiX+s1BrnYeFALKWScZNaTqCNaQvA4bF0PrJkeyvcWY15/m+z5eWlZR+N+lHSPLSW+tH353/8B2OBJGlL/rjB0PZWU6l7rxHG+jYg7pQMkagKw9gcRo5Rre63HSj6kEMlrWm0UnV6kaZU+g7ry5j5pcvTkePrZNXsQc5c7FraAtaAIDo7DLxojlvwqnW+wX5/cWQAdO8YoI7ClxIIZ/NsNnEA1RZS9v7oJEDP0EZ9JNr0mKoJQImovT2Digpl04ARonbxMBrUxPLvbcjQkq9zKkZvpB9SDqaEpRkyTeaPqdmdFq2TF5HtwAd1lC/4RqtQj3OKV3M8ijr/pJKhvOYALPCIm/Spl4Cs0P88tO4M1RwFp/Wq/VnaLNU5cjsBpk06wK0NJ1cJThHi+2jImCCIP+6bSkUrt6aB1bU1EJuxkz4BoeEhl2c/Yoo+8tTH9oSazat4zRyBXter5JEvj6GIOBBgZ+AYIGTojrZ/2GvvVoFy1/tgagbAfc/KEQ08sRtqBrt+XpdGioJTDdHkkSEavF9GvDvbVsGoUDn4eWUkgVIi9c1y8Ao3fuQXz0F/StBObk7lNXM0DXnYZ74P1Q/tuSu634rLw2YQ7JvaX9vj0TEcVrH6rJ7dncWOLg7kVDOpdANa5MkW01ciBeYyb0pqINI4qx6hZrY0dj8EtlMbHMxv0QCvGxM1rKpW3a+IWFctHahuEFNZwKuwtJNlMvukCgyZUyK7O3M9p8A3w7Dx6zQNCiwHk9OQMli0p54Rc41csch5buE0Fk54hr20x/nhfD064evWf5YvftoLcYOPd0ANA1m3ee//k01FCix7Snb5Slse8iHQ5MCRHX9tmwW5Rw62PKbj8MKoV8Cb76RaLg8C/3fTwxPbHPd3YpHVhLNhrM7NdrTrWC9Egd/I+4titSuA9zT7Hsa4/+3H+JSUYSQjP80KlgUGvWb3+gFZPtG0YBtqAc63pu+zSP0ht7oRD446NZo+n+Uarj+gUjycSIXGOPyHRI0dBIN61x3vxbzL3KMid6RXRPnx9G2HRXLXadrwKk/2/ah4oa+YYOfQAAAA" alt="Jakob Kohlhas" width="32" height="32">
-            <span>Explore other <a href="https://kohjakob.com/code/">code</a> and <a href="https://kohjakob.com/paintings/">paintings</a> at kohjakob.com</span>
-        </span>
-        <a class="portfolio-imprint" href="https://kohjakob.com/imprint/" target="_blank" rel="noopener">Imprint &#x2197;&#xFE0E;</a>
-    </div>
+<footer class="site-footer">
+    <a href="https://kohjakob.com/imprint/" target="_blank" rel="noopener">Imprint</a>
 </footer>
 
 <!-- Save for later -->
