@@ -4,7 +4,7 @@ A screen recorder that runs entirely in the browser. Nothing gets uploaded.
 
 - **Status:** Live
 - **Live at:** https://super-local-screen-recorder-app.kohjakob.com
-- **Repo:** [kohjakob/Super-Local-Screen-Recorder](https://github.com/kohjakob/Super-Local-Screen-Recorder) (private)
+- **Repo:** [kohjakob/Super-Local-Screen-Recorder](https://github.com/kohjakob/Super-Local-Screen-Recorder) (public)
 
 ## Folders
 
