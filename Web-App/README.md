@@ -23,8 +23,6 @@ Opens on http://localhost:8000. If that port is taken: `make run PORT=8010`.
 
 ## Deploy
 
-**Live at:** https://super-local-screen-recorder-app.kohjakob.com
-
 **Where it runs:** A static file on a DigitalOcean droplet, in `/var/www/super-local-screen-recorder-app.kohjakob.com/`, served by an nginx site for that domain. It has to be HTTPS, because browsers only allow screen capture on secure pages.
 
 **Needs:** SSH access as `root` to `super-local-screen-recorder-app.kohjakob.com`. The first connection asks you to confirm the server's key.
