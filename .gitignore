@@ -1,8 +1,8 @@
-/Docs/
+.DS_Store
 .env
 .env.*
 !.env.example
-.DS_Store
+
 /Icon?
 .claude/
 node_modules/
